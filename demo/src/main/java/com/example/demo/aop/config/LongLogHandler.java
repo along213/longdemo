@@ -51,7 +51,7 @@ public class LongLogHandler implements InvocationHandler {
         }
     }
 
-    void execute(String value,Object[] args)throws Throwable{
+    private void execute(String value,Object[] args)throws Throwable{
 
         int index = value.lastIndexOf(".");
         Class<?> aClass = LongLogHandler.class.getClassLoader().loadClass(value.substring(0, index));
